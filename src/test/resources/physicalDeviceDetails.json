@@ -1,0 +1,32 @@
+{
+	"androidPrimary": {
+		"location": "local",
+		"url": "http://localhost:4730/wd/hub",
+		"model": "Pixel",
+		"udid": "04081FDD4000KH",
+		"driverType": "Android",
+		"appPackage": "com.google.android.apps.messaging",
+		"appActivity": "com.google.android.apps.messaging.ui.ConversationListActivity",
+		"noReset": "true"
+	},
+	"androidSecondary_Second": {
+		"location": "local",
+		"url": "http://0.0.0.0:4723/wd/hub",
+		"model": "Pixel",
+		"udid": "04081FDD4000KH",
+		"driverType": "Android",
+		"appPackage": "com.google.android.dialer",
+		"appActivity": "com.google.android.dialer.extensions.GoogleDialtactsActivity",
+		"noReset": "true"
+	},
+	"androidSecondary": {
+		"location": "local",
+		"url": "http://localhost:4727/wd/hub",
+		"model": "Pixel",
+		"udid": "03271FDD40008K",
+		"driverType": "Android",
+		"appPackage": "com.google.android.dialer",
+		"appActivity": "com.google.android.dialer.extensions.GoogleDialtactsActivity",
+		"noReset": "true"
+	}
+} 

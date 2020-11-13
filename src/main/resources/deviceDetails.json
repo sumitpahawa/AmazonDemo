@@ -1,0 +1,18 @@
+{
+  "DEVICE_MO": {
+    "deviceName": "Red-Mi",
+    "location": "local",
+    "appium_url": "http://127.0.0.1:4723/wd/hub",
+    "oem": "RedMi",
+    "model": "RedMi",
+    "udid": "9746a52c9807",
+    "phoneNumber": "4259749363",
+    "driverType": "Android",
+    "apps": {
+      "amazonapp": {
+        "appPackage": "in.amazon.mShop.android.shopping",
+        "appActivity": "com.amazon.mShop.home.HomeActivity"
+      }
+    }
+  }
+}
