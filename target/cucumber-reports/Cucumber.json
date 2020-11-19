@@ -1,0 +1,210 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2020-11-19T09:45:57.737Z",
+        "before": [
+          {
+            "result": {
+              "duration": 342000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitions.Hooks.beforeScenario(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "Login to amazon mobile application and search foran item and add to cart and purchase it”",
+        "description": "",
+        "id": "search-and-purchase-product;login-to-amazon-mobile-application-and-search-foran-item-and-add-to-cart-and-purchase-it”",
+        "after": [
+          {
+            "result": {
+              "duration": 859000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitions.AmazonSearchStep.closeDriver()"
+            }
+          },
+          {
+            "result": {
+              "duration": 4000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "StepDefinitions.Hooks.after(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 34784000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User is on home page",
+            "match": {
+              "location": "StepDefinitions.AmazonSearchStep.user_is_on_home_page()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 2000000,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.AmazonSearchStep.afterEveryStep(io.cucumber.java.Scenario)"
+                }
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 31066000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "click on signIn button",
+            "match": {
+              "location": "StepDefinitions.AmazonSearchStep.clickOnSignInButton()"
+            },
+            "after": [
+              {
+                "result": {
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.AmazonSearchStep.afterEveryStep(io.cucumber.java.Scenario)"
+                }
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "Enter the valid credential and click on login button.",
+            "match": {
+              "location": "StepDefinitions.AmazonSearchStep.enterTheValidCredential()"
+            },
+            "after": [
+              {
+                "result": {
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.AmazonSearchStep.afterEveryStep(io.cucumber.java.Scenario)"
+                }
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 31369000000,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User successfully logged in to the application",
+            "match": {
+              "location": "StepDefinitions.AmazonSearchStep.userSuccessfullyLoggedInToTheApplication()"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 1000000,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.AmazonSearchStep.afterEveryStep(io.cucumber.java.Scenario)"
+                }
+              }
+            ],
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 5481000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "User enter the \"65 inch TV\" in search box",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"65 inch TV\"",
+                  "offset": 15
+                }
+              ],
+              "location": "StepDefinitions.AmazonSearchStep.userEnterTheInSearchBox(java.lang.String)"
+            },
+            "after": [
+              {
+                "result": {
+                  "duration": 1000000,
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.AmazonSearchStep.afterEveryStep(io.cucumber.java.Scenario)"
+                }
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 44932000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Select any of the product from search list and add it to cart and complete the purchase process",
+            "match": {
+              "location": "StepDefinitions.AmazonSearchStep.selectAnyOfTheProductFromSearchListAndAddItToCartAndCompleteThePurchaseProcess()"
+            },
+            "after": [
+              {
+                "result": {
+                  "status": "passed"
+                },
+                "match": {
+                  "location": "StepDefinitions.AmazonSearchStep.afterEveryStep(io.cucumber.java.Scenario)"
+                }
+              }
+            ],
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@Search"
+          }
+        ]
+      }
+    ],
+    "name": "Search and purchase product",
+    "description": "",
+    "id": "search-and-purchase-product",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/demo/AmazonSearch.feature",
+    "tags": [
+      {
+        "name": "@Search",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

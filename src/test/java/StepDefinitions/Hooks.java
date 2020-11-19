@@ -21,7 +21,7 @@ import static org.apache.commons.lang3.StringUtils.repeat;
 
 public class Hooks {
     public ADB adbDUT;
-    public ADB adbREFERENCE;
+
     public DeviceManager deviceManagerDUT;
     public JSONReader jsonReader;
     private long startTime;
@@ -51,6 +51,11 @@ public class Hooks {
     public void after(Scenario scenario) {
         MyLogger.log.info("### END OF SCENARIO : " + scenario.getName() + " ,Time taken:" + getStartTime() + " mm:ss, Status: " + capitalize(scenario.getStatus().toString()));
         MyLogger.log.info("##########################" + repeat("#", scenario.getName().length() + scenario.getStatus().toString().length()) + "###########################");
+        try {
+            Runtime.getRuntime().exec("kill -9 $(lsof -t -i:4723)");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 
@@ -63,13 +68,17 @@ public class Hooks {
     }
 
     public static void startAppiumServer() {
-        serviceBuilder = new AppiumServiceBuilder();
-        serviceBuilder.withIPAddress("127.0.0.1");
-        serviceBuilder.usingPort(4723);
-        serviceBuilder.usingDriverExecutable(new File("/opt/node-v12.18.4-linux-x64/bin/node"));
-        serviceBuilder.withAppiumJS(new File("/usr/local/bin/appium"));
-        server = AppiumDriverLocalService.buildService(serviceBuilder);
-        server.start();
+        try {
+            serviceBuilder = new AppiumServiceBuilder();
+            serviceBuilder.withIPAddress("127.0.0.1");
+            serviceBuilder.usingPort(4723);
+            serviceBuilder.usingDriverExecutable(new File("/opt/node-v12.18.4-linux-x64/bin/node"));
+            serviceBuilder.withAppiumJS(new File("/usr/local/bin/appium"));
+            server = AppiumDriverLocalService.buildService(serviceBuilder);
+            server.start();
+        } catch (Exception e){
+
+        }
     }
 
     public static void stopAppiumServer() {

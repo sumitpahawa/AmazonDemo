@@ -4,16 +4,12 @@ import core.managers.logmanager.MyLogger;
 import core.uiactions.AndroidUiActions;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.AndroidElement;
-import jdk.jfr.internal.Logger;
 import org.openqa.selenium.ScreenOrientation;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
-import java.util.Set;
 
 public class AmazonHomePage extends AndroidUiActions {
-
 
     public AmazonHomePage(AndroidDriver<AndroidElement> driver) {
         super(driver);
@@ -25,7 +21,8 @@ public class AmazonHomePage extends AndroidUiActions {
 
     @FindBy(id = "android.widget.TextView")
     List<AndroidElement> allTextViews;
-
+    @FindBy(xpath = "//*[@resource-id='a-autoid-0-announce']")
+    AndroidElement deliverToThisAddressBtn;
 
     public AmazonHomePage tapOnSearchBox() {
         try {
@@ -64,6 +61,7 @@ public class AmazonHomePage extends AndroidUiActions {
             e.printStackTrace();
         }
     }
+
     public AmazonHomePage addToCart() {
         try {
             ScreenOrientation CurrentScreen = driver.getOrientation();
@@ -94,4 +92,24 @@ public class AmazonHomePage extends AndroidUiActions {
     }
 
 
-}
+
+public void clickOnContinueBtn() {
+        try {
+        tapUiAutomatorContent("Continue");
+        MyLogger.log.info("Successfully tap on Continue button");
+        } catch (Exception e) {
+        MyLogger.log.info("Unable to tap on Continue button");
+        e.printStackTrace();
+        }
+        }
+public AmazonHomePage clickOnSignInButton(){
+        try{
+        tapUiAutomatorContent("Sign in");
+        Thread.sleep(3000);
+        MyLogger.log.info("Successfully tap on SignIn button");
+        }catch (Exception e){
+        MyLogger.log.info("Unable to tap on SignIn button");
+        }
+        return this;
+        }
+        }

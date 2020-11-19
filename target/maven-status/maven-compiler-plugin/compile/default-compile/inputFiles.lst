@@ -1,0 +1,12 @@
+/home/admin12/ATT_QE-master/src/main/java/core/managers/DeviceManager.java
+/home/admin12/ATT_QE-master/src/main/java/core/constants/Constants.java
+/home/admin12/ATT_QE-master/src/main/java/api/apps/Apps.java
+/home/admin12/ATT_QE-master/src/main/java/core/uiactions/AndroidUiActions.java
+/home/admin12/ATT_QE-master/src/main/java/api/apps/amazonapp/AmazonHomePage.java
+/home/admin12/ATT_QE-master/src/main/java/api/apps/amazonapp/AmazonLoginPage.java
+/home/admin12/ATT_QE-master/src/main/java/core/managers/DriverManager.java
+/home/admin12/ATT_QE-master/src/main/java/core/constants/Direction.java
+/home/admin12/ATT_QE-master/src/main/java/core/managers/logmanager/MyLogger.java
+/home/admin12/ATT_QE-master/src/main/java/core/managers/baseutils/ADB.java
+/home/admin12/ATT_QE-master/src/main/java/core/managers/filemanager/JSONReader.java
+/home/admin12/ATT_QE-master/src/main/java/api/apps/amazonapp/AmazonApp.java

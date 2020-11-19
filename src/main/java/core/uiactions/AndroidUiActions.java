@@ -32,7 +32,13 @@ import static io.appium.java_client.touch.offset.PointOption.point;
 import static java.time.Duration.ofMillis;
 import static io.appium.java_client.touch.TapOptions.tapOptions;
 import static io.appium.java_client.touch.offset.ElementOption.element;
+/**
+ *This class AndroidUiActions have all that thar are required to interact with ui element like. click, swipe , scroll, select ,touch and other ui actionss
+ *
+ *
+ * @author  Sumit Pahawa
 
+ */
 public class AndroidUiActions {
     public DeviceManager deviceManager;
     public AndroidDriver<AndroidElement> driver;
@@ -45,6 +51,9 @@ public class AndroidUiActions {
         adb = deviceManager.adb;
     }
 
+    /**
+     *swipe downwards to screen
+     */
     public void swipeDownward() {
         Dimension size = driver.manage().window().getSize();
         int width = (int) (size.getWidth() / 2);
@@ -54,8 +63,10 @@ public class AndroidUiActions {
         new TouchAction(driver).press(PointOption.point(width, startPoint)).waitAction()
                 .moveTo(PointOption.point(width, endPoint)).release().perform();
     }
-    
 
+    /**
+     *swipe upwards to screen
+     */
     public void swipeUpward() {
 
         Dimension size=driver.manage().window().getSize();
@@ -65,7 +76,12 @@ public class AndroidUiActions {
         int endPoint=(int)(size.getHeight()*0.21);
         new TouchAction(driver).press(PointOption.point(width, endPoint)).waitAction().moveTo(PointOption.point(width, startPoint)).release().perform();
     }
-
+    /**
+     *the method is used to check the visibility of after every  2.5 sec and maximum upto 30 sec
+     * otherwise throw timeoout exception
+     * @param : AndroidElement
+     * @return : element
+     */
     public WebElement waitToAppear(AndroidElement element) throws Exception {
         try {
             Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
@@ -78,7 +94,11 @@ public class AndroidUiActions {
             throw new Exception();
         }
     }
-
+    /**the method is used to check the visibility of after every  2.5 sec and maximum upto 60 sec
+     * otherwise throw timeoout exception
+     * @param : WebElement
+     * @return : AndroidElement
+     */
     public WebElement waitToAppear(WebElement element) throws Exception {
         try {
             Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
@@ -91,7 +111,12 @@ public class AndroidUiActions {
             throw new Exception();
         }
     }
-
+    /**the method is used to check the visibility of after every  2.5 sec and maximum upto time specified in secs
+     * otherwise throw timeoout exception
+     * @param : WebElement
+     *  @param : time in seconds
+     * @return : AndroidElement
+     */
     public WebElement waitToAppear(AndroidElement element, int waitSeconds) {
         try {
             Wait<WebDriver> wait = new FluentWait<WebDriver>(driver)
@@ -103,7 +128,12 @@ public class AndroidUiActions {
         }
         return element;
     }
-
+    /**the method is used to check the visibility of after every  2.5 sec and maximum upto time specified in secs
+     * otherwise throw timeoout exception
+     * @param : WebElement
+     *  @param : time in seconds
+     * @return : AndroidElement
+     */
     public boolean waitForActivity(String appActivity, int waitSeconds) {
         MyLogger.log.info("Checking App Activity");
 
@@ -420,7 +450,11 @@ public class AndroidUiActions {
 
         return this;
     }
-
+    /**
+     * press enter key
+     *
+     * @return
+     */
     public AndroidUiActions pressEnterKey(){
         try{
             pressKey(AndroidKey.ENTER);
@@ -433,14 +467,18 @@ public class AndroidUiActions {
         return this;
     }
 
-
+    /**
+     * paste key
+     *
+     * @return
+     */
     public AndroidUiActions pasteKey(){
         try{
             pressKey(AndroidKey.PASTE);
-            MyLogger.log.info("Successfully pressed the ENTER key");
+            MyLogger.log.info("Successfully  paste");
         }catch(Exception e){
-            MyLogger.log.debug("Not able to pressed the ENTER key" + e.getMessage());
-            Assert.fail("Not able to pressed the ENTER key" + e.getMessage());
+            MyLogger.log.debug("Not able to paste it" + e.getMessage());
+            Assert.fail("Not able to paste it" + e.getMessage());
         }
 
         return this;
@@ -949,9 +987,9 @@ public class AndroidUiActions {
 
     public AndroidUiActions tapUiAutomatorText(String text) {
         try {
-             WebElement element = driver.findElementByAndroidUIAutomator("new UiScrollable(" +
-                     "new UiSelector().scrollable(false).instance(0))" + ".scrollIntoView(" +
-                                "new UiSelector().textContains(\"" + text + "\").instance(0))");
+            WebElement element = driver.findElementByAndroidUIAutomator("new UiScrollable(" +
+                    "new UiSelector().scrollable(false).instance(0))" + ".scrollIntoView(" +
+                    "new UiSelector().textContains(\"" + text + "\").instance(0))");
             System.out.println(element);
             new TouchAction<>(driver).tap(tapOptions().withElement(element(element))).perform();
             MyLogger.log.info("Tapped to the element with text successfully");
@@ -996,6 +1034,12 @@ public class AndroidUiActions {
         return this;
     }
 
+    /**
+     * tap on the anrdroid ui element
+     *
+     * @param
+     * @return
+     */
     public AndroidUiActions tapUiAutomatorClassName(String text) {
         try {
             WebElement element = driver.findElementByAndroidUIAutomator("new UiScrollable(" +

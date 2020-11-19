@@ -47,4 +47,5 @@ public class AmazonApp {
         sessionReqMap.put("URL", jsonReader.getJSONValue(device, "appium_url"));
         return sessionReqMap;
     }
+
 }

@@ -1,0 +1,17 @@
+core/managers/DriverManager.class
+api/apps/amazonapp/AmazonHomePage.class
+core/constants/Constants.class
+api/apps/amazonapp/AmazonLoginPage.class
+core/managers/logmanager/MyLogger.class
+core/managers/filemanager/JSONReader.class
+core/managers/baseutils/ADB$2.class
+core/constants/Direction.class
+api/apps/Apps.class
+core/managers/DeviceManager.class
+core/uiactions/AndroidUiActions.class
+core/managers/baseutils/ADB$1.class
+api/apps/amazonapp/AmazonApp.class
+core/uiactions/AndroidUiActions$1.class
+core/managers/baseutils/ADB.class
+core/managers/baseutils/ADB$3.class
+core/managers/baseutils/ADB$4.class
