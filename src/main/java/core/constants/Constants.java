@@ -7,11 +7,10 @@ public class Constants {
     public static final String UNDERSCORE = "_";
     public static final String DEVICE_MO = "DEVICE_MO";
     public static final String DEVICE_MT = "DEVICE_MT";
-    public static final String DEVICE_EO = "DEVICE_EO";
+
 
     public static final String DEVICE_MQ = "DEVICE_MQ";
     public static final String DEVICE_MD= "DEVICE_MD";
     public static final  String SCREENSHOTS_FOLDER_NAME ="test-output/screenshots/";
-    public static final String SSID = "Art";
     public static final String PNG_POSTFIX = ".png";
 }
